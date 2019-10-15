@@ -21,7 +21,7 @@ services:
     image: postgres:9.6
     env_file: judge0-api.conf
     volumes:
-      - C:\Users\zshin\Desktop\ApiComplie\ApiProduction\judge0-api-v1.3.1/srv/postgres-data:/home/postgresql/data/
+      - ./srv/postgres-data:/var/lib/postgresql/data/
     restart: always
 
   redis:
@@ -32,5 +32,5 @@ services:
     ]
     env_file: judge0-api.conf
     volumes:
-      - C:\Users\zshin\Desktop\ApiComplie\ApiProduction\judge0-api-v1.3.1/srv/redis-data:/data
+      - ./srv/redis-data:/data
     restart: always
