@@ -21,7 +21,7 @@ services:
     image: postgres:9.6
     env_file: judge0-api.conf
     volumes:
-      - ./srv/postgres-data:/var/lib/postgresql/data/
+      - /root/IDE_API/IDE_API/srv/postgres-data:/var/lib/postgresql/data/
     restart: always
 
   redis:
@@ -32,5 +32,5 @@ services:
     ]
     env_file: judge0-api.conf
     volumes:
-      - ./srv/redis-data:/data
+      - /root/IDE_API/IDE_API/srv/redis-data:/data
     restart: always
